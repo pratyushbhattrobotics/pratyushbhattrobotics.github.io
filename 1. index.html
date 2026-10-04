@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Pratyush Bhatt's robotics portfolio: hexapod locomotion research, robotic manipulation, balancing, and visual SLAM.">
+  <title>Pratyush Bhatt | Robotics Portfolio</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --ink: #182331;
+      --muted: #536170;
+      --accent: #176b57;
+      --border: #dce3e8;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+    }
+    a { color: var(--accent); }
+    a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 5px;
+    }
+    .container { width: min(1080px, 90%); margin: auto; }
+    header { background: white; border-bottom: 1px solid var(--border); }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+      flex-wrap: wrap;
+    }
+    .brand { font-weight: 750; text-decoration: none; color: var(--ink); }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { text-decoration: none; color: var(--muted); }
+    .hero { padding: 90px 0 75px; max-width: 820px; }
+    .eyebrow {
+      color: var(--accent);
+      font-size: .8rem;
+      font-weight: 750;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      line-height: 1.08;
+      letter-spacing: -.055em;
+      margin: 18px 0 25px;
+    }
+    .intro { font-size: 1.2rem; color: var(--muted); max-width: 680px; }
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 7px;
+      font-weight: 650;
+    }
+    section { padding: 48px 0; scroll-margin-top: 25px; }
+    h2 { font-size: 2rem; letter-spacing: -.035em; margin: 0 0 12px; }
+    .section-intro { color: var(--muted); margin-bottom: 30px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 30px;
+    }
+    .number {
+      display: block;
+      font-size: .8rem;
+      color: var(--accent);
+      font-weight: 750;
+      letter-spacing: .1em;
+      margin-bottom: 16px;
+    }
+    h3 { font-size: 1.45rem; line-height: 1.3; margin: 0 0 15px; }
+    .card p { color: var(--muted); }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+    .tag {
+      background: #eef4f1;
+      color: #235b4c;
+      border-radius: 5px;
+      padding: 4px 9px;
+      font-size: .78rem;
+    }
+    details { border-top: 1px solid var(--border); margin-top: 24px; padding-top: 16px; }
+    summary { cursor: pointer; font-weight: 650; color: var(--accent); }
+    li { margin-bottom: 9px; }
+    .about {
+      border-top: 1px solid var(--border);
+      margin-top: 35px;
+      max-width: 780px;
+    }
+    .about p { color: var(--muted); }
+    footer {
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      padding: 26px 0;
+      margin-top: 35px;
+      font-size: .9rem;
+    }
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero { padding: 60px 0 40px; }
+      .card { padding: 24px; }
+      .nav-links { gap: 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container" aria-label="Main navigation">
+      <a class="brand" href="#">Pratyush Bhatt</a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="https://github.com/pratyushbhattrobotics">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <p class="eyebrow">Mechanical Engineering · Penn State</p>
+      <h1>Building robots.<br>Studying how they move.</h1>
+      <p class="intro">
+        I'm Pratyush Bhatt, a Mechanical Engineering student at
+        The Pennsylvania State University. My work spans hexapod
+        locomotion research, robotic manipulation, feedback control,
+        and visual mapping.
+      </p>
+      <a class="button" href="#projects">Explore my projects ↓</a>
+    </div>
+
+    <section id="projects">
+      <p class="eyebrow">Research &amp; independent projects</p>
+      <h2>Selected work</h2>
+      <p class="section-intro">
+        Exploring robotics through mechanical design, experiments,
+        and software.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <span class="number">01 / LAB RESEARCH</span>
+          <h3>Hexapod Locomotion Research</h3>
+          <p>
+            Studying locomotion efficiency by comparing alternating
+            tripod gait patterns on a six-legged robot.
+          </p>
+          <p>
+            <strong>Research Assistant</strong><br>
+            Locomotion in Biology and Robotics Lab, Penn State<br>
+            October 2025–Present
+          </p>
+          <div class="tags">
+            <span class="tag">MATLAB</span>
+            <span class="tag">Vicon Nexus</span>
+            <span class="tag">Gait analysis</span>
+            <span class="tag">Mechanical design</span>
+          </div>
+          <details>
+            <summary>My contributions</summary>
+            <ul>
+              <li>
+                Collect and analyze experimental data across different
+                phase shifts and duty cycles to evaluate gait performance.
+              </li>
+              <li>
+                Assist in constructing and modifying hexapods,
+                including designing mechanical adjustments.
+              </li>
+              <li>
+                Calibrate sensors and implement optimized gait
+                patterns during lab testing.
+              </li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="card">
+          <span class="number">02 / INDEPENDENT PROJECT</span>
+          <h3>4-DOF Robotic Arm</h3>
+          <p>
+            Developing a servo-driven desktop arm that connects
+            mechanical construction with ROS 2 simulation and
+            motion planning.
+          </p>
+          <div class="tags">
+            <span class="tag">Arduino Uno</span>
+            <span class="tag">ROS 2 Jazzy</span>
+            <span class="tag">MoveIt 2</span>
+            <span class="tag">Gazebo</span>
+          </div>
+          <details>
+            <summary>Project scope</summary>
+            <ul>
+              <li>
+                Assemble and calibrate base, shoulder, elbow,
+                and gripper servos.
+              </li>
+              <li>
+                Configure the robot model, simulation,
+                and motion-planning workflow.
+              </li>
+              <li>
+                Develop a USB serial connection between
+                the ROS 2 computer and Arduino.
+              </li>
+              <li>
+                Extend the project toward webcam-based
+                perception using OpenCV.
+              </li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="card">
+          <span class="number">03 / IN DEVELOPMENT</span>
+          <h3>Self-Balancing Robot</h3>
+          <p>
+            Building a two-wheeled robot to explore how inertial
+            sensing and PID feedback can maintain an upright position.
+          </p>
+          <div class="tags">
+            <span class="tag">PID control</span>
+            <span class="tag">MPU6050</span>
+            <span class="tag">Arduino Uno</span>
+            <span class="tag">3D printing</span>
+          </div>
+          <details>
+            <summary>Project goals</summary>
+            <ul>
+              <li>
+                Build a chassis and integrate motors, a motor driver,
+                an IMU, and battery-powered electronics.
+              </li>
+              <li>
+                Estimate tilt from inertial measurements.
+              </li>
+              <li>
+                Implement and tune a PID controller,
+                then evaluate balancing performance.
+              </li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="card">
+          <span class="number">04 / EARLY DEVELOPMENT</span>
+          <h3>Handheld Visual SLAM</h3>
+          <p>
+            Exploring camera-based indoor mapping and trajectory
+            estimation using a webcam and an Ubuntu laptop.
+          </p>
+          <div class="tags">
+            <span class="tag">Visual SLAM</span>
+            <span class="tag">ROS 2 Jazzy</span>
+            <span class="tag">Logitech C270</span>
+            <span class="tag">Ubuntu</span>
+          </div>
+          <details>
+            <summary>Planned evaluation</summary>
+            <ul>
+              <li>
+                Calibrate the camera and collect indoor video data.
+              </li>
+              <li>
+                Integrate a monocular SLAM pipeline for trajectory
+                estimation and sparse mapping.
+              </li>
+              <li>
+                Test place recognition and loop closure
+                by returning to previously visited locations.
+              </li>
+              <li>
+                Investigate scale ambiguity and compare reconstructed
+                geometry against measured room dimensions after
+                establishing scale.
+              </li>
+            </ul>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <p class="eyebrow">About me</p>
+      <h2>Mechanical engineering meets robotics.</h2>
+      <p>
+        I am a fourth-year Mechanical Engineering student at Penn State,
+        with graduation planned for May 2027. I am interested in robot
+        perception, navigation, learning, and human–robot interaction.
+      </p>
+      <p>
+        Through research and independent projects, I am developing
+        experience in mechanical design, hardware integration,
+        control, and robotics software.
+      </p>
+      <a class="button"
+         href="https://github.com/pratyushbhattrobotics">
+        View my GitHub
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">Pratyush Bhatt · Robotics Portfolio</div>
+  </footer>
+</body>
+</html>
