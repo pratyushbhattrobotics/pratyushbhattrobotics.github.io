@@ -305,20 +305,20 @@
           <details>
             <summary>Photos &amp; video</summary>
             <div class="media-gallery">
-              <img src="1.jpeg"
-                   alt="Hexapod robot"
-                   loading="lazy">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+    <img src="1.jpeg" alt="Hexapod robot" loading="lazy"
+         style="width: 100%; height: 180px; object-fit: contain;">
 
-              <img src="2.jpeg"
-                   alt="Hexapod experimental setup"
-                   loading="lazy">
+    <img src="2.jpeg" alt="Hexapod experimental setup" loading="lazy"
+         style="width: 100%; height: 180px; object-fit: contain;">
+  </div>
 
-              <video controls playsinline preload="metadata">
-                <source src="3.mp4" type="video/mp4">
-                Your browser does not support this video.
-                <a href="3.mp4">Download the video</a>.
-              </video>
-            </div>
+  <video controls playsinline preload="metadata"
+         style="width: 100%; height: auto; max-height: 300px;">
+    <source src="3.mp4" type="video/mp4">
+    Your browser does not support this video.
+  </video>
+</div>
           </details>
         </article>
 
