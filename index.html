@@ -319,44 +319,57 @@
         </article>
 
         <article class="card">
-          <span class="number">02 / INDEPENDENT PROJECT</span>
-          <h3>4-DOF Robotic Arm</h3>
+  <span class="number">02 / COMPLETED PROJECT</span>
+  <h3>Vision-Guided Robotic Arm</h3>
 
-          <p>
-            Developing a servo-driven desktop arm that connects
-            mechanical construction with ROS 2 simulation and
-            motion planning.
-          </p>
+  <p>
+    Built a servo-driven desktop arm that detects objects using
+    a webcam, calculates their positions, and automatically
+    picks and places them at a designated drop location.
+  </p>
 
-          <div class="tags">
-            <span class="tag">Arduino Uno</span>
-            <span class="tag">ROS 2 Jazzy</span>
-            <span class="tag">MoveIt 2</span>
-            <span class="tag">Gazebo</span>
-          </div>
+  <div class="tags">
+    <span class="tag">Robotic manipulation</span>
+    <span class="tag">Computer vision</span>
+    <span class="tag">Inverse kinematics</span>
+    <span class="tag">Embedded systems</span>
+    <span class="tag">Motion planning</span>
+  </div>
 
-          <details>
-            <summary>Project scope</summary>
-            <ul>
-              <li>
-                Assemble and calibrate base, shoulder, elbow,
-                and gripper servos.
-              </li>
-              <li>
-                Configure the robot model, simulation,
-                and motion-planning workflow.
-              </li>
-              <li>
-                Develop a USB serial connection between
-                the ROS 2 computer and Arduino.
-              </li>
-              <li>
-                Extend the project toward webcam-based
-                perception using OpenCV.
-              </li>
-            </ul>
-          </details>
-        </article>
+  <details>
+    <summary>What I built</summary>
+    <ul>
+      <li>
+        Assembled the arm and calibrated its base, shoulder,
+        elbow, and gripper servos using an Arduino Uno.
+      </li>
+      <li>
+        Configured ROS 2 Jazzy, RViz, Gazebo, and MoveIt 2
+        for robot visualization, simulation, and motion planning.
+      </li>
+      <li>
+        Developed a USB serial connection between the computer
+        and Arduino to send movement commands.
+      </li>
+      <li>
+        Implemented OpenCV object detection and converted
+        image coordinates into positions on the work surface.
+      </li>
+      <li>
+        Used inverse kinematics to calculate joint angles
+        and execute an automated pick-and-place sequence.
+      </li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Testing &amp; results</summary>
+    <p>
+      Completed 40 pick-and-place trials, with 35 successful
+      attempts—an 87.5% success rate under the tested conditions.
+    </p>
+  </details>
+</article>
 
         <article class="card">
           <span class="number">03 / IN DEVELOPMENT</span>
