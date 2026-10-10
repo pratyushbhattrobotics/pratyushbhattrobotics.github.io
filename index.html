@@ -502,8 +502,7 @@
       .project-details > summary {
         padding: 15px 23px;
       }
-
-      .detail-content {
+ .detail-content {
         padding: 23px;
       }
 
@@ -525,6 +524,19 @@
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
+      }
+    }
+
+    .preview video {
+      width: 100%;
+      height: 245px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 750px) {
+      .preview video {
+        height: 220px;
       }
     }
   </style>
