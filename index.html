@@ -593,6 +593,47 @@
     height: auto;
   }
 }
+    .hero {
+  max-width: none;
+}
+
+.hero-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  align-items: center;
+  gap: 55px;
+}
+
+.hero-portrait {
+  width: 100%;
+  max-width: 300px;
+  margin: 0;
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 750px) {
+  .hero-main {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .hero-portrait {
+    max-width: 280px;
+  }
+
+  .hero-portrait img {
+    height: auto;
+  }
+}
   </style>
 </head>
 
