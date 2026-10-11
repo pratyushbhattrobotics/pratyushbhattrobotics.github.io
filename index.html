@@ -634,6 +634,28 @@
     height: auto;
   }
 }
+    .arm-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.arm-gallery video,
+.arm-gallery img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #f0f3f3;
+}
+
+@media (max-width: 750px) {
+  .arm-gallery {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 
@@ -936,16 +958,31 @@
 
                 <h4>Testing &amp; results</h4>
 
-                <p class="result">
-                  <strong>
-                    35 successful attempts out of 40 trials.
-                  </strong><br>
-                  Achieved an 87.5% pick-and-place success rate
-                  under the tested conditions.
-                </p>
-              </div>
-            </details>
-          </article>
+<p class="result">
+  <strong>
+    35 successful attempts out of 40 trials.
+  </strong><br>
+  Achieved an 87.5% pick-and-place success rate
+  under the tested conditions.
+</p>
+
+<h4>Gallery</h4>
+
+<div class="arm-gallery">
+  <video controls playsinline preload="metadata"
+         aria-label="Robotic arm demonstration">
+    <source src="8.mp4" type="video/mp4">
+    Your browser does not support this video.
+  </video>
+
+  <img src="9.jpeg"
+       alt="Vision-guided robotic arm"
+       loading="lazy">
+</div>
+
+</div>
+</details>
+</article>
 
           <!-- SELF-BALANCING ROBOT -->
           <article class="project">
