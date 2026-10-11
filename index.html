@@ -1059,15 +1059,18 @@
 
                 <ul>
                   <li>
-                    Build the chassis and integrate motors,
-                    sensing, and battery-powered electronics.
+                    Built a two-wheeled robot that maintains an upright
+                    position by moving its wheels beneath it as it tilts.
                   </li>
                   <li>
-                    Estimate tilt from inertial measurements.
+                    Combined accelerometer and gyroscope readings to estimate
+                    tilt and implemented PD control in C++ to adjust motor
+                    speed and direction.
                   </li>
                   <li>
-                    Tune proportional and derivative gains
-                    and evaluate balancing performance.
+                    Calibrated the sensors and tuned the balancing response,
+                    accounting for the minimum motor command needed to move
+                    and adding automatic shutdown if the robot tilts too far.
                   </li>
                 </ul>
               </div>
