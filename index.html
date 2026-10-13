@@ -1356,14 +1356,14 @@
                 <h3>Handheld Visual SLAM</h3>
 
                 <p>
-                  Exploring camera-based indoor mapping and
-                  trajectory estimation using a depth camera
+                  Exploring indoor 3D mapping and camera trajectory
+                  estimation using a handheld depth camera.
                 </p>
 
                 <div class="tags">
-                  <span class="tag">Visual SLAM</span>
+                  <span class="tag">RGB-D SLAM</span>
                   <span class="tag">Localization</span>
-                  <span class="tag">Mapping</span>
+                  <span class="tag">3D Mapping</span>
                   <span class="tag">ROS 2</span>
                 </div>
               </div>
@@ -1371,7 +1371,7 @@
               <div class="illustration"
                    style="background: #f1edf7;">
                 <strong>x · y · z</strong>
-                <span>Camera motion → Trajectory &amp; map</span>
+                <span>Colour + depth → Trajectory &amp; 3D map</span>
               </div>
             </div>
 
@@ -1382,37 +1382,34 @@
                 <h4>Project goal</h4>
 
                 <p>
-                  Explore how a moving camera can estimate its
-                  trajectory while reconstructing features of
-                  an indoor environment.
+                  Develop a handheld mapping system that estimates
+                  the camera’s position and orientation while building
+                  a 3D map of an indoor environment.
                 </p>
 
-                <h4>Current platform</h4>
+                <h4>Planned platform</h4>
 
                 <ul>
-                  <li>Depth camera</li>
+                  <li>RGB-D camera</li>
                   <li>ROS 2 Jazzy</li>
                 </ul>
 
-                <h4>Planned evaluation</h4>
+                <h4>Planned approach</h4>
 
                 <ul>
                   <li>
-                    Calibrate the camera and collect indoor
-                    video data.
+                    Capture colour images and depth measurements
+                    while moving the camera through a room.
                   </li>
                   <li>
-                    Integrate a monocular SLAM pipeline for
-                    trajectory estimation and sparse mapping.
+                    Integrate an RGB-D SLAM pipeline to estimate
+                    camera motion and combine observations into
+                    a 3D map.
                   </li>
                   <li>
-                    Test place recognition and loop closure by
-                    returning to previously visited locations.
-                  </li>
-                  <li>
-                    Investigate scale ambiguity and compare
-                    reconstructed geometry against measured room
-                    dimensions after establishing scale.
+                     Use loop closure to recognise previously
+                     visited locations and reduce accumulated
+                     mapping drift.
                   </li>
                 </ul>
               </div>
